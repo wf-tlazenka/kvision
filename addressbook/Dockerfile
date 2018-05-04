@@ -1,5 +1,6 @@
-FROM thyrlian/android-sdk
+FROM ymmtmdk/gradle-kotlin
 
+USER root
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install curl
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
