@@ -1,0 +1,12 @@
+web:
+  dockerfile: Dockerfile
+  build: .
+  ports:
+   - "8080:8080"
+   - "8088:8088"
+  volumes:
+   - .:/app
+   - ./build.gradle.docker:/app/build.gradle
+  stdin_open: true
+  command: ./gradlew -t run
+  
